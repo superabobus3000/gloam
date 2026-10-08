@@ -1,0 +1,753 @@
+{
+  "version": "0.3.1-alpha.1",
+  "seed": 20261006,
+  "method": "Old chunks prepared with -PskipLanterns; restart without flag; 14 areas revisited with processing dwell; offline MCA block/biome palettes decoded. Portal lanterns excluded by different block ID.",
+  "count": 76,
+  "biomes": {
+    "gloam:old_growth_birch_forest": 10,
+    "gloam:old_growth_pine_taiga": 13,
+    "gloam:old_growth_spruce_taiga": 1,
+    "gloam:pale_garden": 1,
+    "gloam:flower_forest": 2,
+    "gloam:forest": 10,
+    "gloam:dark_forest": 4,
+    "gloam:swamp": 15,
+    "gloam:mangrove_swamp": 3,
+    "gloam:cherry_grove": 2,
+    "gloam:dappled_forest": 5,
+    "gloam:taiga": 3,
+    "gloam:snowy_taiga": 3,
+    "gloam:birch_forest": 4
+  },
+  "minimum_xz": 43.04648650006177,
+  "one_per_cell": true,
+  "legacy_migration_no_duplicate": true,
+  "positions": [
+    {
+      "x": 2663,
+      "y": 80,
+      "z": 2587,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2790,
+      "y": 77,
+      "z": 2591,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2844,
+      "y": 81,
+      "z": 2589,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_spruce_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2912,
+      "y": 78,
+      "z": 2588,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:pale_garden",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2583,
+      "y": 72,
+      "z": 2592,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:flower_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2787,
+      "y": 73,
+      "z": 2660,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2846,
+      "y": 75,
+      "z": 2661,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dark_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2910,
+      "y": 76,
+      "z": 2666,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dark_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2859,
+      "y": 73,
+      "z": 2717,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dark_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2918,
+      "y": 68,
+      "z": 2712,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dark_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2780,
+      "y": 76,
+      "z": 2726,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2774,
+      "y": 78,
+      "z": 2783,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2843,
+      "y": 77,
+      "z": 2775,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2920,
+      "y": 74,
+      "z": 2777,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2970,
+      "y": 76,
+      "z": 2843,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 3036,
+      "y": 80,
+      "z": 2848,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2917,
+      "y": 77,
+      "z": 2900,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3042,
+      "y": 81,
+      "z": 2902,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:mangrove_swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2986,
+      "y": 80,
+      "z": 2915,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3038,
+      "y": 75,
+      "z": 2967,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2923,
+      "y": 80,
+      "z": 2987,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2982,
+      "y": 80,
+      "z": 2983,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2902,
+      "y": 79,
+      "z": 3037,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2966,
+      "y": 76,
+      "z": 3040,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3037,
+      "y": 79,
+      "z": 3044,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2538,
+      "y": 72,
+      "z": 2471,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:cherry_grove",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2526,
+      "y": 78,
+      "z": 2519,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:cherry_grove",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 3095,
+      "y": 76,
+      "z": 3101,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3092,
+      "y": 75,
+      "z": 3171,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dappled_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2971,
+      "y": 76,
+      "z": 3100,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2906,
+      "y": 69,
+      "z": 3115,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3034,
+      "y": 75,
+      "z": 3105,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dappled_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2773,
+      "y": 78,
+      "z": 3163,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2855,
+      "y": 77,
+      "z": 3165,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2911,
+      "y": 72,
+      "z": 3160,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2971,
+      "y": 73,
+      "z": 3167,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2729,
+      "y": 78,
+      "z": 3168,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3030,
+      "y": 77,
+      "z": 3175,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dappled_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2715,
+      "y": 79,
+      "z": 3223,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "minecraft:waxed_weathered_copper_lantern"
+    },
+    {
+      "x": 2856,
+      "y": 76,
+      "z": 3230,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2773,
+      "y": 77,
+      "z": 3242,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2920,
+      "y": 75,
+      "z": 3234,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2973,
+      "y": 78,
+      "z": 3237,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 3039,
+      "y": 76,
+      "z": 3237,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dappled_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2711,
+      "y": 81,
+      "z": 3289,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2775,
+      "y": 78,
+      "z": 3285,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2907,
+      "y": 74,
+      "z": 3293,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3030,
+      "y": 86,
+      "z": 3287,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:dappled_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2856,
+      "y": 76,
+      "z": 3301,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2965,
+      "y": 76,
+      "z": 3304,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2646,
+      "y": 74,
+      "z": 3348,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2913,
+      "y": 71,
+      "z": 3349,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2602,
+      "y": 77,
+      "z": 3360,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2975,
+      "y": 76,
+      "z": 3363,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3028,
+      "y": 79,
+      "z": 3364,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2585,
+      "y": 74,
+      "z": 3417,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2659,
+      "y": 75,
+      "z": 3433,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2709,
+      "y": 73,
+      "z": 3432,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2651,
+      "y": 76,
+      "z": 3482,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2726,
+      "y": 73,
+      "z": 3476,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2582,
+      "y": 76,
+      "z": 3489,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2584,
+      "y": 76,
+      "z": 3559,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:snowy_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2656,
+      "y": 81,
+      "z": 3554,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:snowy_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2728,
+      "y": 77,
+      "z": 3558,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:snowy_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 3105,
+      "y": 76,
+      "z": 2838,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:mangrove_swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3100,
+      "y": 78,
+      "z": 2909,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:mangrove_swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3114,
+      "y": 73,
+      "z": 2979,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 3105,
+      "y": 75,
+      "z": 3042,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:swamp",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2594,
+      "y": 79,
+      "z": 2465,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:birch_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2652,
+      "y": 79,
+      "z": 2473,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2598,
+      "y": 78,
+      "z": 2524,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2656,
+      "y": 81,
+      "z": 2523,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2529,
+      "y": 78,
+      "z": 3355,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2516,
+      "y": 76,
+      "z": 3434,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2525,
+      "y": 77,
+      "z": 3488,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2525,
+      "y": 75,
+      "z": 2588,
+      "block": "minecraft:waxed_weathered_copper_lantern",
+      "biome": "gloam:flower_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    }
+  ],
+  "visits": [
+    {
+      "biome": "birch_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 17; занято ячеек=22, проверено=17, в очереди=32"
+    },
+    {
+      "biome": "cherry_grove",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 17; занято ячеек=22, проверено=17, в очереди=32"
+    },
+    {
+      "biome": "dappled_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 17; занято ячеек=22, проверено=17, в очереди=32"
+    },
+    {
+      "biome": "dark_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 26; занято ячеек=31, проверено=26, в очереди=46"
+    },
+    {
+      "biome": "flower_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 35; занято ячеек=40, проверено=35, в очереди=54"
+    },
+    {
+      "biome": "forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 40; занято ячеек=45, проверено=40, в очереди=57"
+    },
+    {
+      "biome": "mangrove_swamp",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 47; занято ячеек=52, проверено=47, в очереди=34"
+    },
+    {
+      "biome": "old_growth_birch_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 51; занято ячеек=56, проверено=51, в очереди=36"
+    },
+    {
+      "biome": "old_growth_pine_taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 57; занято ячеек=62, проверено=57, в очереди=40"
+    },
+    {
+      "biome": "old_growth_spruce_taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 57; занято ячеек=62, проверено=57, в очереди=40"
+    },
+    {
+      "biome": "pale_garden",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 60; занято ячеек=65, проверено=60, в очереди=26"
+    },
+    {
+      "biome": "snowy_taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 67; занято ячеек=72, проверено=67, в очереди=32"
+    },
+    {
+      "biome": "swamp",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 68; занято ячеек=73, проверено=68, в очереди=31"
+    },
+    {
+      "biome": "taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 71; занято ячеек=76, проверено=71, в очереди=29"
+    }
+  ],
+  "restart_identical_positions": true,
+  "restart_new_lanterns": 0,
+  "restart_visits": [
+    {
+      "biome": "birch_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=26"
+    },
+    {
+      "biome": "cherry_grove",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=26"
+    },
+    {
+      "biome": "dappled_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=32"
+    },
+    {
+      "biome": "dark_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=42"
+    },
+    {
+      "biome": "flower_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=40"
+    },
+    {
+      "biome": "forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=28"
+    },
+    {
+      "biome": "mangrove_swamp",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=33"
+    },
+    {
+      "biome": "old_growth_birch_forest",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=29"
+    },
+    {
+      "biome": "old_growth_pine_taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=25"
+    },
+    {
+      "biome": "old_growth_spruce_taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=13"
+    },
+    {
+      "biome": "pale_garden",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=21"
+    },
+    {
+      "biome": "snowy_taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=28"
+    },
+    {
+      "biome": "swamp",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=28"
+    },
+    {
+      "biome": "taiga",
+      "stats": "Пары: 0, свободные арки: 1, лесные фонари за сессию: 0; занято ячеек=76, проверено=0, в очереди=37"
+    }
+  ]
+}

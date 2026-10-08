@@ -1,0 +1,19 @@
+{
+  "block.gloam.portal": "Gloam Gateway",
+  "biome.gloam.forest": "Gloam Forest",
+  "biome.gloam.flower_forest": "Gloam Flower Forest",
+  "biome.gloam.birch_forest": "Gloam Birch Forest",
+  "biome.gloam.old_growth_birch_forest": "Gloam Old Growth Birch Forest",
+  "biome.gloam.dark_forest": "Gloam Dark Forest",
+  "biome.gloam.pale_garden": "Gloam Pale Garden",
+  "biome.gloam.dappled_forest": "Gloam Dappled Forest",
+  "biome.gloam.taiga": "Gloam Taiga",
+  "biome.gloam.old_growth_pine_taiga": "Gloam Old Growth Pine Taiga",
+  "biome.gloam.old_growth_spruce_taiga": "Gloam Old Growth Spruce Taiga",
+  "biome.gloam.snowy_taiga": "Gloam Snowy Taiga",
+  "biome.gloam.swamp": "Gloam Swamp",
+  "biome.gloam.mangrove_swamp": "Gloam Mangrove Swamp",
+  "biome.gloam.cherry_grove": "Gloam Cherry Grove",
+  "gloam.portal.entering": "Crossing the Gloam…",
+  "gloam.portal.arrived": "Beyond the veil"
+}

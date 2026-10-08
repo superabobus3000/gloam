@@ -1,0 +1,37 @@
+{
+  "ambient_light": 0.02,
+  "attributes": {
+    "minecraft:visual/sky_color": "#02080d",
+    "minecraft:visual/fog_color": "#172b2d",
+    "minecraft:visual/sky_light_color": "#7a7aff",
+    "minecraft:visual/sky_light_factor": 0.24,
+    "minecraft:visual/sun_angle": 180.0,
+    "minecraft:visual/moon_angle": 0.0,
+    "minecraft:visual/star_brightness": 0.5,
+    "minecraft:gameplay/sky_light_level": 0.26666668,
+    "minecraft:gameplay/monsters_burn": false,
+    "minecraft:gameplay/bed_rule": {
+      "can_set_spawn": "never",
+      "can_sleep": "never",
+      "error_message": {
+        "text": "В сумраке нельзя спать."
+      }
+    },
+    "minecraft:gameplay/respawn_anchor_works": false
+  },
+  "coordinate_scale": 1.0,
+  "has_ceiling": false,
+  "has_ender_dragon_fight": false,
+  "has_skylight": true,
+  "height": 384,
+  "infiniburn": "#minecraft:infiniburn_overworld",
+  "logical_height": 384,
+  "min_y": -64,
+  "monster_spawn_block_light_limit": 0,
+  "monster_spawn_light_level": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 0,
+    "max_inclusive": 7
+  },
+  "timelines": []
+}

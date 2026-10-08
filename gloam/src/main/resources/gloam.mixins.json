@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "dev.gloam.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "LevelProtectionMixin",
+    "ExplosionProtectionMixin",
+    "PistonProtectionMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

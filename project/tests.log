@@ -1,0 +1,31 @@
+test_all_json_parse (test_assets.Assets.test_all_json_parse) ... ok
+test_no_overworld_override (test_assets.Assets.test_no_overworld_override) ... ok
+test_original_template_dimensions (test_assets.Assets.test_original_template_dimensions) ... ok
+test_portal_geometry_and_dynamic_height (test_assets.Assets.test_portal_geometry_and_dynamic_height) ... ok
+test_portal_wall_and_landing (test_assets.Assets.test_portal_wall_and_landing) ... ok
+test_texture_frames (test_assets.Assets.test_texture_frames) ... ok
+test_263_surface_blocks_not_just_narrow_dirt_tag (test_lantern_backfill.LanternBackfill.test_263_surface_blocks_not_just_narrow_dirt_tag) ... ok
+test_all_forest_biomes_supported (test_lantern_backfill.LanternBackfill.test_all_forest_biomes_supported) ... ok
+test_expanded_window_spacing (test_lantern_backfill.LanternBackfill.test_expanded_window_spacing) ... ok
+test_lighting_independent_of_portal_candidates (test_lantern_backfill.LanternBackfill.test_lighting_independent_of_portal_candidates) ... ok
+test_old_and_new_chunks_and_existing_lamps (test_lantern_backfill.LanternBackfill.test_old_and_new_chunks_and_existing_lamps) ... ok
+test_accessibility_and_timeout (test_stage3.Stage3.test_accessibility_and_timeout) ... ok
+test_charge_authority_and_cancellation (test_stage3.Stage3.test_charge_authority_and_cancellation) ... ok
+test_client_environment_split (test_stage3.Stage3.test_client_environment_split) ... ok
+test_fog_exclusions (test_stage3.Stage3.test_fog_exclusions) ... ok
+test_natural_generation_is_event_driven (test_stage3.Stage3.test_natural_generation_is_event_driven) ... ok
+test_biome_whitelist (test_worldgen.Worldgen.test_biome_whitelist) ... ok
+test_climate_has_no_continent_ocean_switch (test_worldgen.Worldgen.test_climate_has_no_continent_ocean_switch) ... ok
+test_destinations_are_allowed (test_worldgen.Worldgen.test_destinations_are_allowed) ... ok
+test_height_formula_bounds (test_worldgen.Worldgen.test_height_formula_bounds) ... ok
+test_lakes_water_only (test_worldgen.Worldgen.test_lakes_water_only) ... ok
+test_night_not_overridden_by_biomes (test_worldgen.Worldgen.test_night_not_overridden_by_biomes) ... ok
+test_no_canyons_or_dungeon_features (test_worldgen.Worldgen.test_no_canyons_or_dungeon_features) ... ok
+test_no_vanilla_structure_tags_or_overrides (test_worldgen.Worldgen.test_no_vanilla_structure_tags_or_overrides) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.056s
+
+OK
+PASS: anchors 4..32; chain lengths 1..6; continuous attachment; clearance >=2.
+PASS: periodic smooth fog; >=40 lantern spacing; negative coordinates; bounded portal grid.

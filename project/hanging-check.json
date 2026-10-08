@@ -1,0 +1,221 @@
+{
+  "count": 16,
+  "minimum_xz": 43.04648650006177,
+  "one_per_cell": true,
+  "biomes": [
+    "gloam:forest",
+    "gloam:old_growth_birch_forest",
+    "gloam:old_growth_pine_taiga",
+    "gloam:old_growth_spruce_taiga"
+  ],
+  "positions": [
+    {
+      "x": 2711,
+      "y": 77,
+      "z": 3096,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2775,
+      "y": 79,
+      "z": 3094,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2853,
+      "y": 77,
+      "z": 3108,
+      "biome": "gloam:forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2906,
+      "y": 70,
+      "z": 3115,
+      "biome": "gloam:forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2911,
+      "y": 72,
+      "z": 3160,
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2729,
+      "y": 78,
+      "z": 3168,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2783,
+      "y": 85,
+      "z": 3176,
+      "biome": "gloam:old_growth_spruce_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2859,
+      "y": 75,
+      "z": 3175,
+      "biome": "gloam:forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2715,
+      "y": 96,
+      "z": 3223,
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2856,
+      "y": 77,
+      "z": 3230,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2907,
+      "y": 76,
+      "z": 3226,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2773,
+      "y": 87,
+      "z": 3242,
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2708,
+      "y": 87,
+      "z": 3294,
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2775,
+      "y": 89,
+      "z": 3285,
+      "biome": "gloam:old_growth_pine_taiga",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    },
+    {
+      "x": 2907,
+      "y": 74,
+      "z": 3293,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'': String('minecraft:waxed_weathered_copper_lantern')})"
+    },
+    {
+      "x": 2847,
+      "y": 75,
+      "z": 3303,
+      "biome": "gloam:old_growth_birch_forest",
+      "state": "Compound({'id': String('minecraft:waxed_weathered_copper_lantern'), 'properties': Compound({'waterlogged': String('false'), 'hanging': String('true')})})"
+    }
+  ],
+  "version": "0.3.2-alpha.1",
+  "seed": 20261006,
+  "hanging": 10,
+  "ground": 6,
+  "attachments": [
+    {
+      "x": 2853,
+      "y": 77,
+      "z": 3108,
+      "chains": 1,
+      "anchor": "minecraft:oak_leaves",
+      "anchor_height": 4,
+      "ground_clearance": 2
+    },
+    {
+      "x": 2906,
+      "y": 70,
+      "z": 3115,
+      "chains": 1,
+      "anchor": "minecraft:oak_leaves",
+      "anchor_height": 4,
+      "ground_clearance": 2
+    },
+    {
+      "x": 2783,
+      "y": 85,
+      "z": 3176,
+      "chains": 6,
+      "anchor": "minecraft:spruce_leaves",
+      "anchor_height": 14,
+      "ground_clearance": 7
+    },
+    {
+      "x": 2715,
+      "y": 96,
+      "z": 3223,
+      "chains": 6,
+      "anchor": "minecraft:spruce_leaves",
+      "anchor_height": 25,
+      "ground_clearance": 18
+    },
+    {
+      "x": 2856,
+      "y": 77,
+      "z": 3230,
+      "chains": 1,
+      "anchor": "minecraft:birch_leaves",
+      "anchor_height": 5,
+      "ground_clearance": 3
+    },
+    {
+      "x": 2907,
+      "y": 76,
+      "z": 3226,
+      "chains": 1,
+      "anchor": "minecraft:birch_leaves",
+      "anchor_height": 4,
+      "ground_clearance": 2
+    },
+    {
+      "x": 2773,
+      "y": 87,
+      "z": 3242,
+      "chains": 2,
+      "anchor": "minecraft:spruce_leaves",
+      "anchor_height": 14,
+      "ground_clearance": 11
+    },
+    {
+      "x": 2708,
+      "y": 87,
+      "z": 3294,
+      "chains": 3,
+      "anchor": "minecraft:spruce_leaves",
+      "anchor_height": 13,
+      "ground_clearance": 9
+    },
+    {
+      "x": 2775,
+      "y": 89,
+      "z": 3285,
+      "chains": 4,
+      "anchor": "minecraft:spruce_leaves",
+      "anchor_height": 17,
+      "ground_clearance": 12
+    },
+    {
+      "x": 2847,
+      "y": 75,
+      "z": 3303,
+      "chains": 2,
+      "anchor": "minecraft:birch_leaves",
+      "anchor_height": 5,
+      "ground_clearance": 2
+    }
+  ]
+}

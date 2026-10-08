@@ -1,0 +1,34 @@
+{
+  "default_block": "minecraft:stone",
+  "default_fluid": "minecraft:water",
+  "disable_mob_generation": false,
+  "legacy_random_source": false,
+  "noise": {
+    "height": 384,
+    "min_y": -64
+  },
+  "sea_level": 32,
+  "spawn_target": [],
+  "material_rule": "gloam:surface",
+  "noise_router": {
+    "temperature": {
+      "type": "minecraft:noise",
+      "noise": "gloam:temperature",
+      "xz_scale": 0.25,
+      "y_scale": 0.0
+    },
+    "vegetation": {
+      "type": "minecraft:noise",
+      "noise": "gloam:humidity",
+      "xz_scale": 0.25,
+      "y_scale": 0.0
+    },
+    "continents": 0.0,
+    "erosion": 0.0,
+    "depth": 0.0,
+    "ridges": 0.0,
+    "chunk_surface_level": "gloam:surface",
+    "final_density": "gloam:terrain"
+  },
+  "debug_functions": []
+}

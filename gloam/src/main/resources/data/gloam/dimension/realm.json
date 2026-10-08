@@ -1,0 +1,252 @@
+{
+  "type": "gloam:realm",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "gloam:realm",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "gloam:snowy_taiga",
+          "parameters": {
+            "temperature": -0.6,
+            "humidity": -0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:snowy_taiga",
+          "parameters": {
+            "temperature": -0.6,
+            "humidity": -0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:snowy_taiga",
+          "parameters": {
+            "temperature": -0.6,
+            "humidity": 0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:snowy_taiga",
+          "parameters": {
+            "temperature": -0.6,
+            "humidity": 0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:taiga",
+          "parameters": {
+            "temperature": -0.3,
+            "humidity": -0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:old_growth_pine_taiga",
+          "parameters": {
+            "temperature": -0.3,
+            "humidity": -0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:old_growth_spruce_taiga",
+          "parameters": {
+            "temperature": -0.3,
+            "humidity": 0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:pale_garden",
+          "parameters": {
+            "temperature": -0.3,
+            "humidity": 0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:birch_forest",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": -0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:old_growth_birch_forest",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": -0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:forest",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:dark_forest",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:cherry_grove",
+          "parameters": {
+            "temperature": 0.3,
+            "humidity": -0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:flower_forest",
+          "parameters": {
+            "temperature": 0.3,
+            "humidity": -0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:dappled_forest",
+          "parameters": {
+            "temperature": 0.3,
+            "humidity": 0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:swamp",
+          "parameters": {
+            "temperature": 0.3,
+            "humidity": 0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:forest",
+          "parameters": {
+            "temperature": 0.6,
+            "humidity": -0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:dark_forest",
+          "parameters": {
+            "temperature": 0.6,
+            "humidity": -0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:swamp",
+          "parameters": {
+            "temperature": 0.6,
+            "humidity": 0.15,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "gloam:mangrove_swamp",
+          "parameters": {
+            "temperature": 0.6,
+            "humidity": 0.45,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "depth": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

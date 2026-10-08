@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "gloam",
+  "version": "${version}",
+  "name": "Gloam",
+  "description": "Paired gateways and an early nocturnal woodland dimension. World generation is under development.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.gloam.Gloam"
+    ],
+    "client": [
+      "dev.gloam.client.GloamClient"
+    ]
+  },
+  "mixins": [
+    "gloam.mixins.json",
+    {
+      "config": "gloam.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": ">=0.161.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "block.gloam.portal": "Переход в сумрак",
+  "biome.gloam.forest": "Лес сумрака",
+  "biome.gloam.flower_forest": "Цветочный лес сумрака",
+  "biome.gloam.birch_forest": "Берёзовый лес сумрака",
+  "biome.gloam.old_growth_birch_forest": "Старовозрастный берёзовый лес сумрака",
+  "biome.gloam.dark_forest": "Тёмный лес сумрака",
+  "biome.gloam.pale_garden": "Бледный лес сумрака",
+  "biome.gloam.dappled_forest": "Пятнистый лес сумрака",
+  "biome.gloam.taiga": "Тайга сумрака",
+  "biome.gloam.old_growth_pine_taiga": "Старовозрастная сосновая тайга сумрака",
+  "biome.gloam.old_growth_spruce_taiga": "Старовозрастная еловая тайга сумрака",
+  "biome.gloam.snowy_taiga": "Заснеженная тайга сумрака",
+  "biome.gloam.swamp": "Болото сумрака",
+  "biome.gloam.mangrove_swamp": "Мангровое болото сумрака",
+  "biome.gloam.cherry_grove": "Вишнёвый лес сумрака",
+  "gloam.portal.entering": "Граница сумрака…",
+  "gloam.portal.arrived": "По ту сторону"
+}
