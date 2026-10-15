@@ -19,6 +19,14 @@ public abstract class LevelProtectionMixin {
     }
     @Inject(method="setBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z", at=@At("HEAD"), cancellable=true)
     private void gloam$protect(BlockPos pos, BlockState state, int flags, int recursion, CallbackInfoReturnable<Boolean> cir) {
-        if ((Object)this instanceof ServerLevel level && Gloam.isProtected(level, pos)) cir.setReturnValue(false);
+        if ((Object)this instanceof ServerLevel level && Gloam.isProtected(level, pos)&&!dev.gloam.world.LanternChains.authorized(level,pos,state)) cir.setReturnValue(false);
     }
+    @Inject(method="setBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z",at=@At("RETURN"))
+    private void gloam$removeHalo(BlockPos pos,BlockState state,int flags,int recursion,CallbackInfoReturnable<Boolean> cir){
+        if(cir.getReturnValueZ()&&(Object)this instanceof ServerLevel level){
+            dev.gloam.world.HiddenLights.changed(level,pos);
+            if(dev.gloam.world.LanternLighting.lamp(state))dev.gloam.world.LanternLighting.rescan(level,pos.getX()>>4,pos.getZ()>>4);
+        }
+    }
+
 }

@@ -53,7 +53,7 @@ class Worldgen(unittest.TestCase):
   for b in ALLOWED:
    a=read(WORLD+'biome/'+b+'.json')['attributes']
    self.assertEqual(a['minecraft:visual/sky_color'],'#02080d')
-   self.assertEqual(a['minecraft:visual/fog_color'],'#172b2d')
+   self.assertEqual(a['minecraft:visual/fog_color'],'#42403d')
   d=read('data/gloam/dimension_type/realm.json')
   self.assertEqual(d['timelines'],[])
   self.assertEqual(d['attributes']['minecraft:visual/sky_light_factor'],0.24)

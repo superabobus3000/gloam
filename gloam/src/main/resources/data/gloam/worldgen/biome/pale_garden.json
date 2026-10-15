@@ -74,7 +74,7 @@
       },
       "modifier": "overlay"
     },
-    "minecraft:visual/fog_color": "#172b2d",
+    "minecraft:visual/fog_color": "#42403d",
     "minecraft:visual/sky_color": "#02080d",
     "minecraft:visual/water_fog_color": "#556980"
   },

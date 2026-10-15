@@ -15,6 +15,19 @@ class LanternBackfill(unittest.TestCase):
   s=(ROOT/'src/main/java/dev/gloam/world/ForestLanterns.java').read_text()
   for block in ['GRASS_BLOCK','PODZOL','MUD','MUDDY_MANGROVE_ROOTS','MOSS_BLOCK','PALE_MOSS_BLOCK','SNOW']:
    self.assertIn('Blocks.'+block,s)
+ def test_chain_repair_independent_of_old_index(self):
+  s=(ROOT/'src/main/java/dev/gloam/world/LanternChains.java').read_text()
+  self.assertIn('minecraft:waxed_weathered_copper_chain',s)
+  self.assertNotIn('filledCells',s);self.assertNotIn('copperCells',s)
+  for term in ['CHUNK_LOAD.register','FULL_CHUNK_STATUS_CHANGE.register','CHUNK_UNLOAD.register','getChunkNow','BlockStateProperties.WATERLOGGED','BlockStateProperties.AXIS','permit.remove()']:
+   self.assertIn(term,s)
+  self.assertNotIn('getChunk(',s)
+ def test_portal_exception_is_narrow(self):
+  s=(ROOT/'src/main/java/dev/gloam/world/LanternChains.java').read_text()
+  for term in ['p.level!=level','!p.pos.equals(pos)','old.is(Blocks.IRON_CHAIN)&&state.is(copperChain())']:
+   self.assertIn(term,s)
+  s=(ROOT/'src/main/java/dev/gloam/mixin/LevelProtectionMixin.java').read_text()
+  self.assertIn('!dev.gloam.world.LanternChains.authorized(level,pos,state)',s)
  def test_expanded_window_spacing(self):
   # Worst case for all adjacent cells, including negative cell coordinates.
   import math

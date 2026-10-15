@@ -110,7 +110,7 @@
     },
     "minecraft:visual/sky_color": "#02080d",
     "minecraft:visual/water_fog_color": "#5db7ef",
-    "minecraft:visual/fog_color": "#172b2d"
+    "minecraft:visual/fog_color": "#42403d"
   },
   "carvers": [],
   "downfall": 0.8,

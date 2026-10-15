@@ -82,6 +82,7 @@ publishing {
 
 // Small local smoke-test server; no client classes in common code.
 loom.runs.server {
+    if (providers.gradleProperty('probes').isPresent()) vmArg '-Dgloam.test.probes=true'
     if (providers.gradleProperty('skipLanterns').isPresent()) vmArg '-Dgloam.test.skipLanterns=true'
     vmArg '-Xmx768m'
     vmArg '-XX:ActiveProcessorCount=2'

@@ -11,10 +11,11 @@ public final class AtmosphereMath {
     public static long cellHash(long seed,int x,int z) { return mix(seed ^ (x*341873128712L) ^ (z*132897987541L)); }
     public static double fog(long tick, float partial) {
         double t=Math.floorMod(tick,7200)+partial;
-        if(t>=3000) return 0;
-        double a=Math.min(1,Math.min(t/400.0,(3000-t)/600.0));
-        return a*a*(3-2*a);
+        // Permanent haze; only a very gentle change in density, never a clear interval.
+        return .9-.1*Math.cos(t*(Math.PI*2/7200));
     }
+    public static boolean fireflySite(long hash){return Math.floorMod(hash,4)!=0;}
+    public static boolean firefliesActive(long tick,long hash){return Math.floorMod(tick+Math.floorMod(hash,1000),1000)<400;}
     // One forest lantern per 64-block cell, candidate window [20..43] on both axes.
     // Different cells have at least 64-23=41 blocks separation, even across negative coordinates.
     public static boolean lanternWindowChunk(int cx,int cz) {

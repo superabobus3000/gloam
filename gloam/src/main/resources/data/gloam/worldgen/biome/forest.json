@@ -107,7 +107,7 @@
       "modifier": "overlay"
     },
     "minecraft:visual/sky_color": "#02080d",
-    "minecraft:visual/fog_color": "#172b2d"
+    "minecraft:visual/fog_color": "#42403d"
   },
   "carvers": [],
   "downfall": 0.8,

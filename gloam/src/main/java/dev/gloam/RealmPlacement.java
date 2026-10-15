@@ -34,7 +34,7 @@ public final class RealmPlacement {
                 BlockPos origin=new BlockPos(x,ground-7,z);
                 boolean overlaps=false;
                 for (BlockPos p:BlockPos.betweenClosed(origin,origin.offset(12,10,4))) {
-                    if(Gloam.isProtected(level,p)) { overlaps=true; break; }
+                    if(Gloam.isProtected(level,p)||dev.gloam.world.NaturalVillages.reserved(level,p)) { overlaps=true; break; }
                 }
                 if(overlaps) continue;
                 if(++loadedCandidates>12) throw new IllegalStateException("Не найден сухой участок для выхода. Попробуйте создать пару позже или в новом мире.");

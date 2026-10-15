@@ -66,7 +66,7 @@ def build(jar):
   d['features']=[[f for f in step if f.split(':')[-1] not in removed] for step in d['features']]
   d['features'][1]=['gloam:swamp_pond' if name in ['swamp','mangrove_swamp'] else 'gloam:pond']
   d['attributes']['minecraft:visual/sky_color']='#02080d'
-  d['attributes']['minecraft:visual/fog_color']='#172b2d'
+  d['attributes']['minecraft:visual/fog_color']='#42403d'
   write('data/gloam/worldgen/biome/'+name+'.json',d)
  # Compact, seed-dependent patches; no plains, rivers, oceans or disallowed biomes.
  matrix=[['snowy_taiga']*4,

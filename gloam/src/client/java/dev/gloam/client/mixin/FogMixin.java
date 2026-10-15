@@ -22,21 +22,20 @@ public abstract class FogMixin {
         var p=Minecraft.getInstance().player;
         if(p==null||p.hasEffect(MobEffects.BLINDNESS)||p.hasEffect(MobEffects.DARKNESS))return;
         float f=(float)AtmosphereMath.fog(level.getGameTime(),delta.getGameTimeDeltaPartialTick(false));
-        if(f<=0)return;
+        
         FogData data=cir.getReturnValue();
         float baseline=Math.min(data.environmentalEnd,data.renderDistanceEnd);
         if(!Float.isFinite(baseline))baseline=Math.max(56,distance*16f);
-        float end=baseline+(Math.min(baseline,56)-baseline)*f;
+        float end=Math.min(baseline,72-20*f);
         float oldStart=Math.min(data.environmentalStart,data.renderDistanceStart);
         if(!Float.isFinite(oldStart))oldStart=baseline*0.8f;
-        float start=oldStart+(Math.min(oldStart,8)-oldStart)*f;
+        float start=Math.min(Math.min(oldStart,10-6*f),Math.max(0,end-1));
         // Respect shorter vanilla/effect distances and never extend visibility.
         data.environmentalEnd=Math.min(data.environmentalEnd,end);
         data.environmentalStart=Math.min(data.environmentalStart,start);
         data.skyEnd=Math.min(data.skyEnd,end);
         data.cloudEnd=Math.min(data.cloudEnd,end);
-        data.color.x+=(0.065f-data.color.x)*f*0.6f;
-        data.color.y+=(0.115f-data.color.y)*f*0.6f;
-        data.color.z+=(0.105f-data.color.z)*f*0.6f;
+        // Smoky neutral grey like the supplied forest reference; no old green tint.
+        data.color.x=0.26f;data.color.y=0.25f;data.color.z=0.24f;
     }
 }

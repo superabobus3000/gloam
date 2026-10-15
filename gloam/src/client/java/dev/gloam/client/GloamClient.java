@@ -24,8 +24,10 @@ public final class GloamClient implements ClientModInitializer {
                 int p=payload.phase();if(p<0||p>21)return;
                 age=0;phase=p;arrival=p==21?16:0;target=p==21?1:p/20f;
             }));
-        ClientPlayConnectionEvents.DISCONNECT.register((handler,client)->reset());
+        ClientPlayNetworking.registerGlobalReceiver(dev.gloam.net.FireflyAreasPayload.TYPE,(payload,context)->context.client().execute(()->Fireflies.receive(payload.areas())));
+        ClientPlayConnectionEvents.DISCONNECT.register((handler,client)->{reset();Fireflies.reset();});
         ClientTickEvents.END_CLIENT_TICK.register(client->{
+            Fireflies.tick(client);
             if(client.player==null||client.level==null||!client.player.isAlive()){reset();return;}
             if(client.isPaused())return;
             animationTicks++;previous=strength;age++;

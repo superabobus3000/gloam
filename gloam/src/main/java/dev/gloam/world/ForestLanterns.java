@@ -105,10 +105,10 @@ public final class ForestLanterns {
         try{
             // A pre-index (0.3) light must be discovered BEFORE any candidate is placed in its cell.
             boolean existing=hasExisting(c,chunks);
-            boolean placed=!existing&&place(c);
+            boolean placed=!existing&&!index.filledCells.contains(c.key())&&place(c);
             checked.add(c.key());
-            if(existing||placed){index.filledCells.add(c.key());dirty=true;}
-            if(placed)placedThisSession++;
+            if(existing||placed||index.filledCells.contains(c.key())){index.filledCells.add(c.key());dirty=true;}
+            if(placed){placedThisSession++;for(LevelChunk chunk:chunks)LanternLighting.rescan(c.level,chunk.getPos().x(),chunk.getPos().z());}
         }catch(Exception e){Gloam.LOG.error("Forest lighting failed in cell {},{}",c.x,c.z,e);}
         queued.remove(c);
     }
@@ -125,7 +125,9 @@ public final class ForestLanterns {
                 int y0=chunk.getSectionYFromSectionIndex(si)*16;
                 for(int x=Math.max(bx,chunk.getPos().getMinBlockX());x<=Math.min(bx+23,chunk.getPos().getMinBlockX()+15);x++)
                     for(int z=Math.max(bz,chunk.getPos().getMinBlockZ());z<=Math.min(bz+23,chunk.getPos().getMinBlockZ()+15);z++)
-                        for(int y=0;y<16;y++)if(lamp(section.getBlockState(x&15,y,z&15))&&!Gloam.isProtected(c.level,new BlockPos(x,y0+y,z)))return true;
+                        for(int y=0;y<16;y++)if(lamp(section.getBlockState(x&15,y,z&15))&&!Gloam.isProtected(c.level,new BlockPos(x,y0+y,z))&&!NaturalVillages.reserved(c.level,new BlockPos(x,y0+y,z))){
+                            return true;
+                        }
             }
         }
         return false;
@@ -153,7 +155,7 @@ public final class ForestLanterns {
                 BlockPos floor=new BlockPos(x,y,z);var ground=level.getBlockState(floor);
                 if(!(ground.is(BlockTags.DIRT)||ground.is(Blocks.GRASS_BLOCK)||ground.is(Blocks.PODZOL)||ground.is(Blocks.MUD)||ground.is(Blocks.MUDDY_MANGROVE_ROOTS)||ground.is(Blocks.MOSS_BLOCK)||ground.is(Blocks.PALE_MOSS_BLOCK)))continue;
                 BlockPos pos=floor.above();
-                if(!replaceable(level,pos)||!forest(level,pos))break;
+                if(!replaceable(level,pos)||!forest(level,pos)||NaturalVillages.reserved(level,pos))break;
                 boolean trunk=false;
                 for(int dx=-2;dx<=2;dx++)for(int dz=-2;dz<=2;dz++){
                     if(Math.abs(dx)+Math.abs(dz)>2)continue;
@@ -191,7 +193,7 @@ public final class ForestLanterns {
             }
             if(!clear)continue;
             // Build down from the real anchor, with no gaps, then attach the lantern.
-            for(int k=1;k<=length;k++)level.setBlock(anchor.below(k),Blocks.IRON_CHAIN.defaultBlockState(),Block.UPDATE_ALL);
+            for(int k=1;k<=length;k++)level.setBlock(anchor.below(k),LanternChains.copperChain().defaultBlockState(),Block.UPDATE_ALL);
             if(level.setBlock(light,lantern.defaultBlockState().setValue(BlockStateProperties.HANGING,true),Block.UPDATE_ALL))return true;
             for(int k=1;k<=length;k++)level.setBlock(anchor.below(k),Blocks.AIR.defaultBlockState(),Block.UPDATE_ALL);
         }

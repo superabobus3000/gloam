@@ -2,7 +2,7 @@
   "ambient_light": 0.02,
   "attributes": {
     "minecraft:visual/sky_color": "#02080d",
-    "minecraft:visual/fog_color": "#172b2d",
+    "minecraft:visual/fog_color": "#42403d",
     "minecraft:visual/sky_light_color": "#7a7aff",
     "minecraft:visual/sky_light_factor": 0.24,
     "minecraft:visual/sun_angle": 180.0,
@@ -14,7 +14,7 @@
       "can_set_spawn": "never",
       "can_sleep": "never",
       "error_message": {
-        "text": "В сумраке нельзя спать."
+        "text": "\u0412 \u0441\u0443\u043c\u0440\u0430\u043a\u0435 \u043d\u0435\u043b\u044c\u0437\u044f \u0441\u043f\u0430\u0442\u044c."
       }
     },
     "minecraft:gameplay/respawn_anchor_works": false

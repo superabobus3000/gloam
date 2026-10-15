@@ -4,13 +4,13 @@ public class AtmosphereMathTest {
     public static void main(String[] args){
         for(long t=-10000;t<20000;t++){
             double f=AtmosphereMath.fog(t,0);
-            check(f>=0&&f<=1,"fog bounds");
+            check(f>=.799999&&f<=1.000001,"fog bounds");
             check(Math.abs(f-AtmosphereMath.fog(t+7200,0))<1e-9,"period");
             check(Math.abs(f-AtmosphereMath.fog(t+1,0))<.004,"smooth edge");
         }
-        check(AtmosphereMath.fog(0,0)==0,"clear at start");
-        check(AtmosphereMath.fog(1600,0)==1,"peak");
-        check(AtmosphereMath.fog(5000,0)==0,"clear interval");
+        check(Math.abs(AtmosphereMath.fog(0,0)-.8)<1e-9,"permanent at start");
+        check(AtmosphereMath.fog(3600,0)==1,"peak");
+        check(AtmosphereMath.fog(5000,0)>=.8,"no clear interval");
         for(int cell=-30;cell<30;cell++){
             int left=cell*64+20,right=(cell+1)*64+20;
             check(right-(left+23)>=40,"lantern minimum across cells");
@@ -29,6 +29,13 @@ public class AtmosphereMathTest {
             check(Math.floorMod(cx,24)>=4&&Math.floorMod(cx,24)<=19,"portal margin");
             check(AtmosphereMath.portalChunk(seed,x+1,z,true)-cx>=9,"portal cell separation");
         }
-        System.out.println("PASS: periodic smooth fog; >=40 lantern spacing; negative coordinates; bounded portal grid.");
+        int selected=0;
+        for(int i=0;i<120000;i++)if(AtmosphereMath.fireflySite(AtmosphereMath.cellHash(20261006,i,i*3)))selected++;
+        check(selected>89000&&selected<91000,"3/4 firefly ratio");
+        for(int i=-100;i<100;i++){
+            int active=0;for(long t=0;t<1000;t++)if(AtmosphereMath.firefliesActive(t,i))active++;
+            check(active==400,"intermittent clusters");
+        }
+        System.out.println("PASS: permanent smooth grey fog; 3/4 more frequent intermittent firefly sites; >=40 lantern spacing; negative coordinates; bounded portal grid.");
     }
 }

@@ -27,7 +27,7 @@ write('assets/gloam/textures/block/portal.png.mcmeta',{'animation':{'frametime':
 # Static environmental attributes replace time-driven overworld tracks; never change overworld's clock.
 write('data/gloam/dimension_type/realm.json',{
  'ambient_light':0.02,'attributes':{
- 'minecraft:visual/sky_color':'#02080d','minecraft:visual/fog_color':'#172b2d',
+ 'minecraft:visual/sky_color':'#02080d','minecraft:visual/fog_color':'#42403d',
  'minecraft:visual/sky_light_color':'#7a7aff','minecraft:visual/sky_light_factor':0.24,
  'minecraft:visual/sun_angle':180.0,'minecraft:visual/moon_angle':0.0,
  'minecraft:visual/star_brightness':0.5,'minecraft:gameplay/sky_light_level':0.26666668,

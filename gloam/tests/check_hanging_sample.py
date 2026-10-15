@@ -19,13 +19,13 @@ for p in r['positions']:
  x,y,z=p['x'],p['y'],p['z'];v=get(x,y,z)
  if str(v.get('properties',{}).get('hanging','false'))!='true':continue
  n=0
- while scan.name(get(x,y+n+1,z))=='minecraft:iron_chain':n+=1
+ while scan.name(get(x,y+n+1,z))=='minecraft:waxed_weathered_copper_chain':n+=1
  anchor=scan.name(get(x,y+n+1,z));assert 1<=n<=6 and ('leaves' in anchor or 'log' in anchor)
  floor=y-1
  while scan.name(get(x,floor,z)) in ['minecraft:air','minecraft:short_grass','minecraft:fern','minecraft:tall_grass','minecraft:large_fern','minecraft:leaf_litter']:floor-=1
  assert y-floor>=2
  checks.append(dict(x=x,y=y,z=z,chains=n,anchor=anchor,anchor_height=y+n+1-floor,ground_clearance=y-floor))
-r.update(version='0.3.2-alpha.1',seed=20261006,hanging=len(checks),ground=r['count']-len(checks),attachments=checks)
+r.update(version='0.3.4-alpha.1',seed=20261006,hanging=len(checks),ground=r['count']-len(checks),attachments=checks)
 assert r['hanging']>0 and r['ground']>0
 assert max(p['anchor_height'] for p in checks)>7
 assert len(set(p['chains'] for p in checks))>1

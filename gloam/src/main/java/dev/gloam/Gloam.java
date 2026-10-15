@@ -79,6 +79,13 @@ public final class Gloam implements ModInitializer {
         for (End end:state.natural) if(end.dimension.equals(dim)&&end.contains(pos)) return true;
         return false;
     }
+    public static boolean hasProtectedFootprint(ServerLevel level,int minX,int minZ,int maxX,int maxZ){
+        String dim=level.dimension().identifier().toString();
+        for(Pair pair:state.pairs)for(End e:java.util.List.of(pair.a,pair.b))
+            if(e.dimension.equals(dim)&&e.x<=maxX&&e.x+12>=minX&&e.z<=maxZ&&e.z+4>=minZ)return true;
+        for(End e:state.natural)if(e.dimension.equals(dim)&&e.x<=maxX&&e.x+12>=minX&&e.z<=maxZ&&e.z+4>=minZ)return true;
+        return false;
+    }
     public static End knownAt(ServerLevel level,int x,int z) {
         String dim=level.dimension().identifier().toString();
         for(Pair p:state.pairs) for(End e:List.of(p.a,p.b)) if(e.dimension.equals(dim)&&e.x==x&&e.z==z)return e;
@@ -120,6 +127,7 @@ public final class Gloam implements ModInitializer {
 
     @Override public void onInitialize() {
         PayloadTypeRegistry.clientboundPlay().register(PortalEffectPayload.TYPE,PortalEffectPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(dev.gloam.net.FireflyAreasPayload.TYPE,dev.gloam.net.FireflyAreasPayload.CODEC);
         NaturalPortals.init();
         var key = ResourceKey.create(Registries.BLOCK, id("portal"));
         PORTAL = Registry.register(BuiltInRegistries.BLOCK, key,
@@ -178,7 +186,15 @@ public final class Gloam implements ModInitializer {
                     ctx.getSource().sendSuccess(() -> Component.literal(JSON.toJson(state.natural)),false);return state.natural.size();
                 }))
                 .then(Commands.literal("stats").executes(ctx -> {
-                    ctx.getSource().sendSuccess(() -> Component.literal("Пары: "+state.pairs.size()+", свободные арки: "+state.natural.size()+", лесные фонари за сессию: "+dev.gloam.world.ForestLanterns.placedThisSession+"; "+dev.gloam.world.ForestLanterns.status()),false);return 1;
+                    ctx.getSource().sendSuccess(() -> Component.literal("Gloam "+net.fabricmc.loader.api.FabricLoader.getInstance().getModContainer("gloam").orElseThrow().getMetadata().getVersion().getFriendlyString()+" | Пары: "+state.pairs.size()+", свободные арки: "+state.natural.size()+", лесные фонари за сессию: "+dev.gloam.world.ForestLanterns.placedThisSession+"; "+dev.gloam.world.ForestLanterns.status()+"; заменено железных звеньев: "+dev.gloam.world.LanternChains.upgradedThisSession+"; деревень: "+dev.gloam.world.NaturalVillages.count()),false);return 1;
+                }))
+                .then(Commands.literal("villages").executes(ctx->{
+                    ctx.getSource().sendSuccess(()->Component.literal(dev.gloam.world.NaturalVillages.listing()),false);return 1;
+                }))
+                .then(Commands.literal("village_candidates").executes(ctx->{
+                    var src=ctx.getSource();
+                    if(!src.getLevel().dimension().equals(REALM)){src.sendFailure(Component.literal("Кандидаты деревень доступны только в Gloam."));return 0;}
+                    src.sendSuccess(()->Component.literal(dev.gloam.world.NaturalVillages.candidates(src.getLevel(),BlockPos.containing(src.getPosition()))),false);return 1;
                 }))
                 .then(Commands.literal("list").executes(ctx -> {
                     ctx.getSource().sendSuccess(() -> Component.literal(JSON.toJson(state.pairs)),false); return state.pairs.size();
@@ -195,7 +211,35 @@ public final class Gloam implements ModInitializer {
                     return removed ? 1 : 0;
                 })))
         ));
-        LOG.info("Gloam initialized: natural gateways, sparse lanterns, fog and transition effects enabled. Villages and custom caves are pending.");
+        // Dev probes are unavailable in the installed JAR unless explicitly enabled by a JVM property.
+        if(Boolean.getBoolean("gloam.test.probes"))CommandRegistrationCallback.EVENT.register((dispatcher,access,environment)->dispatcher.register(
+            Commands.literal("gloam_probe").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                .then(Commands.literal("light").executes(ctx->{
+                    var l=ctx.getSource().getLevel();var p=BlockPos.containing(ctx.getSource().getPosition());
+                    ctx.getSource().sendSuccess(()->Component.literal("block="+l.getBrightness(net.minecraft.world.level.LightLayer.BLOCK,p)+"; emission="+l.getBlockState(p).getLightEmission()),false);return 1;
+                }))
+                .then(Commands.literal("arrival").then(Commands.argument("uuid",com.mojang.brigadier.arguments.StringArgumentType.word()).executes(ctx->{
+                    boolean ok=dev.gloam.world.NaturalVillages.ensureArrival(ctx.getSource().getLevel(),BlockPos.containing(ctx.getSource().getPosition()),UUID.fromString(com.mojang.brigadier.arguments.StringArgumentType.getString(ctx,"uuid")));
+                    ctx.getSource().sendSuccess(()->Component.literal("arrival="+ok),false);return ok?1:0;
+                })))
+                .then(Commands.literal("codec").executes(ctx->{
+                    var raw=io.netty.buffer.Unpooled.buffer();
+                    var buf=new net.minecraft.network.RegistryFriendlyByteBuf(raw,ctx.getSource().getLevel().registryAccess());
+                    try{
+                        var points=new ArrayList<BlockPos>();for(int i=0;i<32;i++)points.add(new BlockPos(i,70,-i));
+                        var packet=new dev.gloam.net.FireflyAreasPayload(points);
+                        dev.gloam.net.FireflyAreasPayload.CODEC.encode(buf,packet);
+                        if(!dev.gloam.net.FireflyAreasPayload.CODEC.decode(buf).equals(packet))throw new IllegalStateException("Codec roundtrip");
+                        buf.clear();buf.writeVarInt(33);boolean rejected=false;
+                        try{dev.gloam.net.FireflyAreasPayload.CODEC.decode(buf);}catch(IllegalArgumentException ex){rejected=true;}
+                        if(!rejected)throw new IllegalStateException("Codec accepted33areas");
+                        ctx.getSource().sendSuccess(()->Component.literal("codec=PASS"),false);return 1;
+                    }finally{buf.release();}
+                }))
+                .then(Commands.literal("halo").executes(ctx->{dev.gloam.world.HiddenLights.ensure(ctx.getSource().getLevel(),BlockPos.containing(ctx.getSource().getPosition()));return 1;}))
+                .then(Commands.literal("fireflies").executes(ctx->{ctx.getSource().sendSuccess(()->Component.literal(dev.gloam.world.LanternLighting.diagnostics(ctx.getSource().getLevel())),false);return 1;}))
+        ));
+        LOG.info("Gloam initialized: natural gateways, sparse lanterns, fog and transition effects enabled. Rare ruined villages enabled; custom caves are pending.");
     }
 
     public static void place(ServerLevel level, End end) {
@@ -258,6 +302,8 @@ public final class Gloam implements ModInitializer {
                    destination.getBlockState(feet.below()).getCollisionShape(destination,feet.below()).isEmpty()||
                    !destination.getFluidState(feet).isEmpty()||!destination.getFluidState(feet.above()).isEmpty())
                     throw new IllegalStateException("Выход заблокирован");
+                if(destination.dimension().equals(REALM)&&!dev.gloam.world.NaturalVillages.ensureArrival(destination,feet,uuid))
+                    player.sendSystemMessage(Component.literal("Для стартовой деревни пока не найден безопасный участок рядом с первым выходом. Переход доступен; деревня не отмечена созданной."));
                 player.teleport(new TeleportTransition(destination,new Vec3(feet.getX()+0.5,feet.getY(),feet.getZ()+0.5),Vec3.ZERO,90,0,TeleportTransition.PLACE_PORTAL_TICKET));
                 player.resetFallDistance();effect(player,21);
             }catch(Exception e){

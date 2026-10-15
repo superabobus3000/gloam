@@ -17,13 +17,13 @@ public final class NaturalPortals {
     private static final ConcurrentLinkedQueue<Job> pending=new ConcurrentLinkedQueue<>();
     private NaturalPortals() {}
     public static void init() {
-        ForestLanterns.init();
+        ForestLanterns.init();LanternChains.init();NaturalVillages.init();LanternLighting.init();HiddenLights.init();
         ServerChunkEvents.CHUNK_GENERATE.register((level,chunk)->{
             var p=chunk.getPos();
             if(supported(level)&&candidate(level,p.x(),p.z())) pending.add(new Job(level,p.x(),p.z(),0));
         });
     }
-    public static void reset(){pending.clear();ForestLanterns.reset();}
+    public static void reset(){pending.clear();ForestLanterns.reset();LanternChains.reset();NaturalVillages.reset();LanternLighting.reset();HiddenLights.reset();}
     public static boolean supported(ServerLevel l){return l.dimension().equals(Level.OVERWORLD)||l.dimension().equals(Gloam.REALM);}
     public static boolean allowedBiome(ServerLevel l,BlockPos p) {
         String key=l.getUncachedNoiseBiome(p.getX()>>2,p.getY()>>2,p.getZ()>>2).unwrapKey().orElseThrow().identifier().toString();
@@ -37,7 +37,7 @@ public final class NaturalPortals {
         return cx==AtmosphereMath.portalChunk(seed(l),rx,rz,true)&&cz==AtmosphereMath.portalChunk(seed(l),rx,rz,false);
     }
     public static void tick(MinecraftServer server){
-        ForestLanterns.tick(server);
+        NaturalVillages.tick(server);ForestLanterns.tick(server);LanternChains.tick(server);LanternLighting.tick(server);HiddenLights.tick(server);
         int budget=Math.min(4,pending.size());
         for(int n=0;n<budget;n++) {
             Job j=pending.poll();if(j==null)break;
@@ -60,6 +60,8 @@ public final class NaturalPortals {
         if(!supported(level)||!candidate(level,cp.x(),cp.z()))return null;
         int x=cp.getMinBlockX()+2,z=cp.getMinBlockZ()+6;
         if(Gloam.retired(level,x,z))return null;
+        for(int dx=0;dx<=12;dx++)for(int dz=0;dz<=4;dz++)
+            if(NaturalVillages.reserved(level,new BlockPos(x+dx,76,z+dz)))return null;
         Gloam.End existing=Gloam.knownAt(level,x,z);if(existing!=null)return existing;
         var gen=level.getChunkSource().getGenerator();var random=level.getChunkSource().randomState();
         int h=gen.getBaseHeight(x+1,z+2,Heightmap.Types.OCEAN_FLOOR_WG,level,random);
